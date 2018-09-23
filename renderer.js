@@ -15,6 +15,7 @@ byId('search-box').onkeyup = function (event) {
   if (event.keyCode === 13) {
     const query = `https://www.google.com/search?q=${byId('search-box').value}`;
     shell.openExternal(query);
+    remote.getCurrentWindow().hide();
   }
 };
 
