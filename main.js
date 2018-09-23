@@ -36,6 +36,7 @@ iohook.on('keyup', (event) => {
       setTimeout(() => { state = 0; }, 1000);
     } else if (state === 1) {
       mainWindow.show();
+      mainWindow.webContents.executeJavaScript('document.getElementById("search-box").focus();document.getElementById("search-box").select();');
       state = 0;
     }
   } else if (state === 1) {

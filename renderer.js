@@ -19,4 +19,9 @@ byId('search-box').onkeyup = function (event) {
   }
 };
 
+window.onload = function () {
+  const searchBox = byId('search-box');
+  searchBox.focus();
+  searchBox.select();
+};
 window.addEventListener('keyup', handler, true);
