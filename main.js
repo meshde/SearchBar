@@ -20,6 +20,8 @@ function createWindow() {
     transparent: true,
   });
 
+  mainWindow.on('blur', () => { mainWindow.hide(); });
+
   mainWindow.loadURL(
     url.format({
       pathname: path.join(__dirname, 'index.html'),
